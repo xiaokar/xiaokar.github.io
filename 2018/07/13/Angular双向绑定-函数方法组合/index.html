@@ -3,22 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>博客完成 | xiaoK</title>
+  <title>Angular双向绑定+函数方法组合 | xiaoK</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在空余时间自己捣鼓了一番，终于把博客给搞定了，发现网上的坑还是挺多的，下面是我在过程中遇到的一些小问题，也纠结了挺久……">
-<meta name="keywords" content="Html5,Css3,JavaScript,TypeScript,Jquery,Ajax,Sass,Angular,Bootstrap,Photoshop,SQLserver,es6">
+  <meta name="description" content="今天项目中用到了Angular和TypeScript组合的使用，感觉还是很不错的，记录下与不组合之前的差异……">
 <meta property="og:type" content="article">
-<meta property="og:title" content="博客完成">
-<meta property="og:url" content="http://yoursite.com/2018/07/10/博客完成/index.html">
+<meta property="og:title" content="Angular双向绑定+函数方法组合">
+<meta property="og:url" content="http://yoursite.com/2018/07/13/Angular双向绑定-函数方法组合/index.html">
 <meta property="og:site_name" content="xiaoK">
-<meta property="og:description" content="在空余时间自己捣鼓了一番，终于把博客给搞定了，发现网上的坑还是挺多的，下面是我在过程中遇到的一些小问题，也纠结了挺久……">
+<meta property="og:description" content="今天项目中用到了Angular和TypeScript组合的使用，感觉还是很不错的，记录下与不组合之前的差异……">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://ys-o.ys168.com/405499952/k5L5I38755MNK4mQkgtn/DNSerror.jpg">
-<meta property="og:updated_time" content="2018-07-12T14:44:58.229Z">
+<meta property="og:image" content="http://ys-h.ys168.com/405499915/kRmdtls2K6M455U5HM9J/01.png">
+<meta property="og:image" content="http://ys-h.ys168.com/405499916/k3O5K374W1IQ8JkRmdtl/03.png">
+<meta property="og:image" content="http://ys-h.ys168.com/405499916/k3O5K374W1IQ8KkRmdtl/04.png">
+<meta property="og:image" content="http://ys-h.ys168.com/405499915/kRmdtls2K6M455U5HM9K/02.png">
+<meta property="og:updated_time" content="2018-07-13T11:26:33.687Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="博客完成">
-<meta name="twitter:description" content="在空余时间自己捣鼓了一番，终于把博客给搞定了，发现网上的坑还是挺多的，下面是我在过程中遇到的一些小问题，也纠结了挺久……">
-<meta name="twitter:image" content="http://ys-o.ys168.com/405499952/k5L5I38755MNK4mQkgtn/DNSerror.jpg">
+<meta name="twitter:title" content="Angular双向绑定+函数方法组合">
+<meta name="twitter:description" content="今天项目中用到了Angular和TypeScript组合的使用，感觉还是很不错的，记录下与不组合之前的差异……">
+<meta name="twitter:image" content="http://ys-h.ys168.com/405499915/kRmdtls2K6M455U5HM9J/01.png">
   
     <link rel="alternate" href="/atom.xml" title="xiaoK" type="application/atom+xml">
   
@@ -71,12 +73,12 @@
   </div>
 </div>
 
-        <section id="main"><article id="post-博客完成" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Angular双向绑定-函数方法组合" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/07/10/博客完成/" class="article-date">
-  <time class="post-time" datetime="2018-07-10T11:30:47.000Z" itemprop="datePublished">
+    <a href="/2018/07/13/Angular双向绑定-函数方法组合/" class="article-date">
+  <time class="post-time" datetime="2018-07-13T11:01:39.000Z" itemprop="datePublished">
     <span class="post-month">7月</span><br/>
-    <span class="post-day">10</span>
+    <span class="post-day">13</span>
   </time>
 </a>
    
@@ -88,7 +90,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      博客完成
+      Angular双向绑定+函数方法组合
     </h1>
   
 
@@ -103,38 +105,31 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="在空余时间自己捣鼓了一番，终于把博客给搞定了，发现网上的坑还是挺多的，下面是我在过程中遇到的一些小问题，也纠结了挺久……"><a href="#在空余时间自己捣鼓了一番，终于把博客给搞定了，发现网上的坑还是挺多的，下面是我在过程中遇到的一些小问题，也纠结了挺久……" class="headerlink" title="在空余时间自己捣鼓了一番，终于把博客给搞定了，发现网上的坑还是挺多的，下面是我在过程中遇到的一些小问题，也纠结了挺久……"></a>在空余时间自己捣鼓了一番，终于把博客给搞定了，发现网上的坑还是挺多的，下面是我在过程中遇到的一些小问题，也纠结了挺久……</h4><a id="more"></a>
-<ul>
-<li>若在git_bash编辑后hexo s提交上github报没有找到dev\tty，这时应检查自己的_config.yml文件中的repo有没有写对，格式例:<code>(冒号后空格)git@github.com:xiaokar/xiaokar.github.io.git</code></li>
-</ul>
+        <h4 id="今天项目中用到了Angular和TypeScript组合的使用，感觉还是很不错的，记录下与不组合之前的差异……"><a href="#今天项目中用到了Angular和TypeScript组合的使用，感觉还是很不错的，记录下与不组合之前的差异……" class="headerlink" title="今天项目中用到了Angular和TypeScript组合的使用，感觉还是很不错的，记录下与不组合之前的差异……"></a>今天项目中用到了Angular和TypeScript组合的使用，感觉还是很不错的，记录下与不组合之前的差异……</h4><a id="more"></a>
 <hr>
-<ul>
-<li>域名解析失败/找不到IP:遇到如图片这种情况时应检查解析设置是否正确，还有必须要在云提供实名验证（纠结到小白的我了），设置完成后cmd终端ping一下自己的域名，有响应的话过几分钟就可以在浏览器进入自己的网站啦！<br><img src="http://ys-o.ys168.com/405499952/k5L5I38755MNK4mQkgtn/DNSerror.jpg" alt="这是图片- -！不是真出错了"></li>
-</ul>
-
+<h4 id="先来看看不组合前的"><a href="#先来看看不组合前的" class="headerlink" title="先来看看不组合前的"></a>先来看看不组合前的</h4><h5 id="利用-ngIF判断手写字符串"><a href="#利用-ngIF判断手写字符串" class="headerlink" title="利用*ngIF判断手写字符串:"></a>利用*ngIF判断手写字符串:</h5><p><img src="http://ys-h.ys168.com/405499915/kRmdtls2K6M455U5HM9J/01.png" alt=""></p>
+<h5 id="这种写法类似搬运工，只需对应数据库字段复制粘贴加修改"><a href="#这种写法类似搬运工，只需对应数据库字段复制粘贴加修改" class="headerlink" title="这种写法类似搬运工，只需对应数据库字段复制粘贴加修改"></a>这种写法类似搬运工，只需对应数据库字段复制粘贴加修改</h5><hr>
+<h4 id="再来看看组合后的"><a href="#再来看看组合后的" class="headerlink" title="再来看看组合后的:"></a>再来看看组合后的:</h4><h5 id="先在HTML界面写组合函数方法内嵌双向绑定的类"><a href="#先在HTML界面写组合函数方法内嵌双向绑定的类" class="headerlink" title="先在HTML界面写组合函数方法内嵌双向绑定的类"></a>先在HTML界面写组合函数方法内嵌双向绑定的类</h5><p><img src="http://ys-h.ys168.com/405499916/k3O5K374W1IQ8JkRmdtl/03.png" alt=""></p>
+<h5 id="接着在ts里面写请求服务的方法和循环判断处理"><a href="#接着在ts里面写请求服务的方法和循环判断处理" class="headerlink" title="接着在ts里面写请求服务的方法和循环判断处理"></a>接着在ts里面写请求服务的方法和循环判断处理</h5><p><img src="http://ys-h.ys168.com/405499916/k3O5K374W1IQ8KkRmdtl/04.png" alt=""></p>
+<h5 id="最后就是在生命钩子调用啦，大功告成！"><a href="#最后就是在生命钩子调用啦，大功告成！" class="headerlink" title="最后就是在生命钩子调用啦，大功告成！"></a>最后就是在生命钩子调用啦，大功告成！</h5><p><img src="http://ys-h.ys168.com/405499915/kRmdtls2K6M455U5HM9K/02.png" alt=""></p>
+<h4 id="原理都很简单，区别就是前者不需要请求服务，而后者则需要。如果有的选择当然选择后者啦，省心省力简单粗暴。"><a href="#原理都很简单，区别就是前者不需要请求服务，而后者则需要。如果有的选择当然选择后者啦，省心省力简单粗暴。" class="headerlink" title="原理都很简单，区别就是前者不需要请求服务，而后者则需要。如果有的选择当然选择后者啦，省心省力简单粗暴。"></a>原理都很简单，区别就是前者不需要请求服务，而后者则需要。如果有的选择当然选择后者啦，省心省力简单粗暴。</h4>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/10/博客完成/" data-id="cjjjvw0i40004q4puuk70753w" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/07/13/Angular双向绑定-函数方法组合/" data-id="cjjjvw0hm0000q4pua4yp80x7" class="article-share-link">分享</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ajax/">Ajax</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Css3/">Css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html5/">Html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jquery/">Jquery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Photoshop/">Photoshop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQLserver/">SQLserver</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TypeScript/">TypeScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/es6/">es6</a></li></ul>
-
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2018/07/12/使用Angular6x-Sass/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          使用Angular6.x+Sass
-        
-      </div>
-    </a>
   
+    <a href="/2018/07/12/使用Angular6x-Sass/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">使用Angular6.x+Sass</div>
+    </a>
   
 </nav>
 
