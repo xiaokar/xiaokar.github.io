@@ -13,15 +13,15 @@
 <meta property="og:site_name" content="xiaoK">
 <meta property="og:description" content="今天项目中用到了Angular和TypeScript组合的使用，感觉还是很不错的，记录下与不组合之前的差异……">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://ys-h.ys168.com/405499915/kRmdtls2K6M455U5HM9J/01.png">
-<meta property="og:image" content="http://ys-h.ys168.com/405499916/k3O5K374W1IQ8JkRmdtl/03.png">
-<meta property="og:image" content="http://ys-h.ys168.com/405499916/k3O5K374W1IQ8KkRmdtl/04.png">
-<meta property="og:image" content="http://ys-h.ys168.com/405499915/kRmdtls2K6M455U5HM9K/02.png">
-<meta property="og:updated_time" content="2018-07-15T06:56:31.604Z">
+<meta property="og:image" content="http://pby58q6yx.bkt.clouddn.com/01.png">
+<meta property="og:image" content="http://pby58q6yx.bkt.clouddn.com/03.png">
+<meta property="og:image" content="http://pby58q6yx.bkt.clouddn.com/04.png">
+<meta property="og:image" content="http://pby58q6yx.bkt.clouddn.com/02.png">
+<meta property="og:updated_time" content="2018-07-16T11:09:46.004Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Angular双向绑定+函数方法组合">
 <meta name="twitter:description" content="今天项目中用到了Angular和TypeScript组合的使用，感觉还是很不错的，记录下与不组合之前的差异……">
-<meta name="twitter:image" content="http://ys-h.ys168.com/405499915/kRmdtls2K6M455U5HM9J/01.png">
+<meta name="twitter:image" content="http://pby58q6yx.bkt.clouddn.com/01.png">
   
     <link rel="alternate" href="/atom.xml" title="xiaoK" type="application/atom+xml">
   
@@ -44,7 +44,7 @@
         <div class="widget-wrap mobile-header">
   <h3 class="widget-title"></h3>
   <div class="widget">
-    <img class="avatar" src="https://github.com/xiaokar/xiaokar.github.io/blob/master/images/czwlogo.gif?raw=true">
+    <img class="avatar" src="http://pby58q6yx.bkt.clouddn.com/czwlogo.gif">
     <h2 class="author">BrotherWei</h2>
     <h3 class="description"></h3>
     <div class="count-box">
@@ -108,16 +108,16 @@
       
         <h4 id="今天项目中用到了Angular和TypeScript组合的使用，感觉还是很不错的，记录下与不组合之前的差异……"><a href="#今天项目中用到了Angular和TypeScript组合的使用，感觉还是很不错的，记录下与不组合之前的差异……" class="headerlink" title="今天项目中用到了Angular和TypeScript组合的使用，感觉还是很不错的，记录下与不组合之前的差异……"></a>今天项目中用到了Angular和TypeScript组合的使用，感觉还是很不错的，记录下与不组合之前的差异……</h4><a id="more"></a>
 <hr>
-<h4 id="先来看看不组合前的"><a href="#先来看看不组合前的" class="headerlink" title="先来看看不组合前的"></a>先来看看不组合前的</h4><h5 id="利用-ngIF判断手写字符串"><a href="#利用-ngIF判断手写字符串" class="headerlink" title="利用*ngIF判断手写字符串:"></a>利用*ngIF判断手写字符串:</h5><p><img src="http://ys-h.ys168.com/405499915/kRmdtls2K6M455U5HM9J/01.png" alt=""></p>
+<h4 id="先来看看不组合前的"><a href="#先来看看不组合前的" class="headerlink" title="先来看看不组合前的"></a>先来看看不组合前的</h4><h5 id="利用-ngIF判断手写字符串"><a href="#利用-ngIF判断手写字符串" class="headerlink" title="利用*ngIF判断手写字符串:"></a>利用*ngIF判断手写字符串:</h5><p><img src="http://pby58q6yx.bkt.clouddn.com/01.png" alt=""></p>
 <h5 id="这种写法类似搬运工，只需对应数据库字段复制粘贴加修改"><a href="#这种写法类似搬运工，只需对应数据库字段复制粘贴加修改" class="headerlink" title="这种写法类似搬运工，只需对应数据库字段复制粘贴加修改"></a>这种写法类似搬运工，只需对应数据库字段复制粘贴加修改</h5><hr>
-<h4 id="再来看看组合后的"><a href="#再来看看组合后的" class="headerlink" title="再来看看组合后的:"></a>再来看看组合后的:</h4><h5 id="先在HTML界面写组合函数方法内嵌双向绑定的类"><a href="#先在HTML界面写组合函数方法内嵌双向绑定的类" class="headerlink" title="先在HTML界面写组合函数方法内嵌双向绑定的类"></a>先在HTML界面写组合函数方法内嵌双向绑定的类</h5><p><img src="http://ys-h.ys168.com/405499916/k3O5K374W1IQ8JkRmdtl/03.png" alt=""></p>
-<h5 id="接着在ts里面写请求服务的方法和循环判断处理"><a href="#接着在ts里面写请求服务的方法和循环判断处理" class="headerlink" title="接着在ts里面写请求服务的方法和循环判断处理"></a>接着在ts里面写请求服务的方法和循环判断处理</h5><p><img src="http://ys-h.ys168.com/405499916/k3O5K374W1IQ8KkRmdtl/04.png" alt=""></p>
-<h5 id="最后就是在生命钩子调用啦，大功告成！"><a href="#最后就是在生命钩子调用啦，大功告成！" class="headerlink" title="最后就是在生命钩子调用啦，大功告成！"></a>最后就是在生命钩子调用啦，大功告成！</h5><p><img src="http://ys-h.ys168.com/405499915/kRmdtls2K6M455U5HM9K/02.png" alt=""></p>
+<h4 id="再来看看组合后的"><a href="#再来看看组合后的" class="headerlink" title="再来看看组合后的:"></a>再来看看组合后的:</h4><h5 id="先在HTML界面写组合函数方法内嵌双向绑定的类"><a href="#先在HTML界面写组合函数方法内嵌双向绑定的类" class="headerlink" title="先在HTML界面写组合函数方法内嵌双向绑定的类"></a>先在HTML界面写组合函数方法内嵌双向绑定的类</h5><p><img src="http://pby58q6yx.bkt.clouddn.com/03.png" alt=""></p>
+<h5 id="接着在ts里面写请求服务的方法和循环判断处理"><a href="#接着在ts里面写请求服务的方法和循环判断处理" class="headerlink" title="接着在ts里面写请求服务的方法和循环判断处理"></a>接着在ts里面写请求服务的方法和循环判断处理</h5><p><img src="http://pby58q6yx.bkt.clouddn.com/04.png" alt=""></p>
+<h5 id="最后就是在生命钩子调用啦，大功告成！"><a href="#最后就是在生命钩子调用啦，大功告成！" class="headerlink" title="最后就是在生命钩子调用啦，大功告成！"></a>最后就是在生命钩子调用啦，大功告成！</h5><p><img src="http://pby58q6yx.bkt.clouddn.com/02.png" alt=""></p>
 <h4 id="原理都很简单，区别就是前者不需要请求服务，而后者则需要。如果有的选择当然选择后者啦，省心省力简单粗暴。"><a href="#原理都很简单，区别就是前者不需要请求服务，而后者则需要。如果有的选择当然选择后者啦，省心省力简单粗暴。" class="headerlink" title="原理都很简单，区别就是前者不需要请求服务，而后者则需要。如果有的选择当然选择后者啦，省心省力简单粗暴。"></a>原理都很简单，区别就是前者不需要请求服务，而后者则需要。如果有的选择当然选择后者啦，省心省力简单粗暴。</h4>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/13/Angular双向绑定-函数方法组合/" data-id="cjjml994z00002opuy63nx64w" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/07/13/Angular双向绑定-函数方法组合/" data-id="cjjmlga8f0000aopugyirara6" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Es6/">Es6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TypeScript/">TypeScript</a></li></ul>
@@ -185,7 +185,7 @@
     <div class="widget-wrap">
   <h3 class="widget-title"></h3>
   <div class="widget">
-    <img class="avatar" src="https://github.com/xiaokar/xiaokar.github.io/blob/master/images/czwlogo.gif?raw=true">
+    <img class="avatar" src="http://pby58q6yx.bkt.clouddn.com/czwlogo.gif">
     <h2 class="author">BrotherWei</h2>
     <h3 class="description"></h3>
     <div class="count-box">
