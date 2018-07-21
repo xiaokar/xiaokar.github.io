@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>原生js写无缝轮播 | xiaoK</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="无缝轮播要点:本案例骨架:.container&amp;gt;&amp;gt;.box&amp;gt;&amp;gt;img(本次案例效果☞雷迪森杰特门点这里(卡了有问题的话刷新下哦)) 大盒子为单图片宽度，里面包的小盒子为所有图片的宽的总和 在放置轮播图的span前后多写一个span，设置原始图定位left为第二个span宽度的负值 点击上下图left改变js处理 定时器自动播放js处理 鼠标停留清除定时器与移除调用js处理">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原生js写无缝轮播">
+<meta property="og:url" content="http://yoursite.com/2018/07/21/原生js写无缝轮播/index.html">
+<meta property="og:site_name" content="xiaoK">
+<meta property="og:description" content="无缝轮播要点:本案例骨架:.container&amp;gt;&amp;gt;.box&amp;gt;&amp;gt;img(本次案例效果☞雷迪森杰特门点这里(卡了有问题的话刷新下哦)) 大盒子为单图片宽度，里面包的小盒子为所有图片的宽的总和 在放置轮播图的span前后多写一个span，设置原始图定位left为第二个span宽度的负值 点击上下图left改变js处理 定时器自动播放js处理 鼠标停留清除定时器与移除调用js处理">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-07-21T12:31:37.560Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="原生js写无缝轮播">
+<meta name="twitter:description" content="无缝轮播要点:本案例骨架:.container&amp;gt;&amp;gt;.box&amp;gt;&amp;gt;img(本次案例效果☞雷迪森杰特门点这里(卡了有问题的话刷新下哦)) 大盒子为单图片宽度，里面包的小盒子为所有图片的宽的总和 在放置轮播图的span前后多写一个span，设置原始图定位left为第二个span宽度的负值 点击上下图left改变js处理 定时器自动播放js处理 鼠标停留清除定时器与移除调用js处理">
+  
+    <link rel="alternate" href="/atom.xml" title="xiaoK" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/plugin/bganimation/bg.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <div class="widget-wrap mobile-header">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="http://pby58q6yx.bkt.clouddn.com/czwlogo.gif">
+    <h2 class="author">BrotherWei</h2>
+    <h3 class="description"></h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>7</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>0</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>21</strong><br>标签</div></a>
+    </div>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+        <section id="main"><article id="post-原生js写无缝轮播" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/21/原生js写无缝轮播/" class="article-date">
+  <time class="post-time" datetime="2018-07-21T11:54:32.000Z" itemprop="datePublished">
+    <span class="post-month">7月</span><br/>
+    <span class="post-day">21</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      原生js写无缝轮播
+    </h1>
+  
+
+        <div>
+          
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="无缝轮播要点"><a href="#无缝轮播要点" class="headerlink" title="无缝轮播要点:"></a>无缝轮播要点:</h4><h5 id="本案例骨架-container-gt-gt-box-gt-gt-img-本次案例效果☞雷迪森杰特门点这里-卡了有问题的话刷新下哦"><a href="#本案例骨架-container-gt-gt-box-gt-gt-img-本次案例效果☞雷迪森杰特门点这里-卡了有问题的话刷新下哦" class="headerlink" title="本案例骨架:.container&gt;&gt;.box&gt;&gt;img(本次案例效果☞雷迪森杰特门点这里(卡了有问题的话刷新下哦))"></a>本案例骨架:.container&gt;&gt;.box&gt;&gt;img(本次案例效果☞<a href="http://xiaok.fun/practice/shuffling/index.html" target="_blank" rel="noopener">雷迪森杰特门点这里</a>(卡了有问题的话刷新下哦))</h5><ul>
+<li><h5 id="大盒子为单图片宽度，里面包的小盒子为所有图片的宽的总和"><a href="#大盒子为单图片宽度，里面包的小盒子为所有图片的宽的总和" class="headerlink" title="大盒子为单图片宽度，里面包的小盒子为所有图片的宽的总和"></a>大盒子为单图片宽度，里面包的小盒子为所有图片的宽的总和</h5></li>
+<li><h5 id="在放置轮播图的span前后多写一个span，设置原始图定位left为第二个span宽度的负值"><a href="#在放置轮播图的span前后多写一个span，设置原始图定位left为第二个span宽度的负值" class="headerlink" title="在放置轮播图的span前后多写一个span，设置原始图定位left为第二个span宽度的负值"></a>在放置轮播图的span前后多写一个span，设置原始图定位left为第二个span宽度的负值</h5></li>
+<li><h5 id="点击上下图left改变js处理"><a href="#点击上下图left改变js处理" class="headerlink" title="点击上下图left改变js处理"></a>点击上下图left改变js处理</h5></li>
+<li><h5 id="定时器自动播放js处理"><a href="#定时器自动播放js处理" class="headerlink" title="定时器自动播放js处理"></a>定时器自动播放js处理</h5></li>
+<li><h5 id="鼠标停留清除定时器与移除调用js处理"><a href="#鼠标停留清除定时器与移除调用js处理" class="headerlink" title="鼠标停留清除定时器与移除调用js处理"></a>鼠标停留清除定时器与移除调用js处理</h5></li>
+<li><h5 id="底部圆点位置与样式js处理"><a href="#底部圆点位置与样式js处理" class="headerlink" title="底部圆点位置与样式js处理"></a>底部圆点位置与样式js处理</h5><h4 id="下面是源码以及解析"><a href="#下面是源码以及解析" class="headerlink" title="下面是源码以及解析"></a>下面是源码以及解析</h4><a id="more"></a>
+<h4 id="Html代码"><a href="#Html代码" class="headerlink" title="Html代码:"></a>Html代码:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">	 	&lt;meta charset=&quot;utf-8&quot; /&gt;</span><br><span class="line">		&lt;title&gt;无缝轮播&lt;/title&gt;</span><br><span class="line">		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/lunbo.css&quot;/&gt;</span><br><span class="line">		&lt;script type=&quot;text/javascript&quot; src=&quot;js/lunbo.js&quot; &gt;&lt;/script&gt;</span><br><span class="line">	&lt;/head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div class=&quot;container&quot;&gt;</span><br><span class="line">			&lt;div class=&quot;box&quot; style=&quot;left:-600px;&quot;&gt;&lt;!--第一张--&gt;</span><br><span class="line">				&lt;img src=&quot;img/5.jpg&quot;/&gt;&lt;!-- 0--&gt;</span><br><span class="line">				&lt;img src=&quot;img/1.jpg&quot;/&gt;&lt;!-- -600--&gt;</span><br><span class="line">				&lt;img src=&quot;img/2.jpg&quot;/&gt;&lt;!-- -1200--&gt;</span><br><span class="line">				&lt;img src=&quot;img/3.jpg&quot;/&gt;&lt;!-- -1800--&gt;</span><br><span class="line">				&lt;img src=&quot;img/4.jpg&quot;/&gt;&lt;!-- -2400--&gt;</span><br><span class="line">				&lt;img src=&quot;img/5.jpg&quot;/&gt;&lt;!-- -3000--&gt;</span><br><span class="line">				&lt;img src=&quot;img/1.jpg&quot;/&gt;&lt;!-- -3600--&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">			&lt;div class=&quot;buttons&quot;&gt;</span><br><span class="line">				&lt;span&gt;1&lt;/span&gt;</span><br><span class="line">				&lt;span&gt;2&lt;/span&gt;</span><br><span class="line">				&lt;span&gt;3&lt;/span&gt;</span><br><span class="line">				&lt;span&gt;4&lt;/span&gt;</span><br><span class="line">				&lt;span&gt;5&lt;/span&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">			&lt;a href=&quot;javascript:void(0)&quot; class=&quot;pre&quot;&gt;&lt;&lt;/a&gt;</span><br><span class="line">			&lt;a href=&quot;javascript:void(0)&quot; class=&quot;next&quot;&gt;&gt;&lt;/a&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">	&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="Css代码"><a href="#Css代码" class="headerlink" title="Css代码:"></a>Css代码:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">	margin: 0;</span><br><span class="line">	padding: 0;</span><br><span class="line">&#125;</span><br><span class="line">img&#123;</span><br><span class="line">	width: 600px;</span><br><span class="line">	height: 400px;</span><br><span class="line">	float: left;</span><br><span class="line">&#125;</span><br><span class="line">a&#123;</span><br><span class="line">	text-decoration: none;</span><br><span class="line">&#125;</span><br><span class="line">.container&#123;</span><br><span class="line">	position: absolute;</span><br><span class="line">	width: 600px;</span><br><span class="line">	height: 400px;</span><br><span class="line">	margin: auto;</span><br><span class="line">	box-shadow: 0 0 20px green;</span><br><span class="line">	overflow: hidden;</span><br><span class="line">	top: 0;</span><br><span class="line">	left: 0;</span><br><span class="line">	bottom: 0;</span><br><span class="line">	right: 0;</span><br><span class="line">&#125;</span><br><span class="line">.box&#123;</span><br><span class="line">	position: absolute;</span><br><span class="line">	width: 4200px;</span><br><span class="line">	height: 400px;</span><br><span class="line">	z-index: 1;</span><br><span class="line">&#125;</span><br><span class="line">.buttons&#123;</span><br><span class="line">	position: absolute;</span><br><span class="line">	z-index: 2;</span><br><span class="line">	width: auto;</span><br><span class="line">	height: 20px;</span><br><span class="line">	left: 230px;</span><br><span class="line">	bottom: 10px;</span><br><span class="line">&#125;</span><br><span class="line">.buttons span&#123;</span><br><span class="line">	margin-left: 5px;</span><br><span class="line">	display: inline-block;</span><br><span class="line">	width: 20px;</span><br><span class="line">	height: 20px;</span><br><span class="line">	border-radius: 50%;</span><br><span class="line">	cursor: pointer;</span><br><span class="line">	background: green;</span><br><span class="line">	color: white;</span><br><span class="line">	text-align: center;</span><br><span class="line">&#125;</span><br><span class="line">.buttons span:first-child&#123;</span><br><span class="line">	margin: 0;</span><br><span class="line">&#125;</span><br><span class="line">.on&#123;</span><br><span class="line">	background: red !important;</span><br><span class="line">&#125;</span><br><span class="line">.pre&#123;</span><br><span class="line">	position: absolute;</span><br><span class="line">	z-index: 3;</span><br><span class="line">	left: 10px;</span><br><span class="line">	font-size: 100px;</span><br><span class="line">	font-weight: bold;</span><br><span class="line">	top: 130px;</span><br><span class="line">&#125;</span><br><span class="line">.next&#123;</span><br><span class="line">	position: absolute;</span><br><span class="line">	z-index: 3;</span><br><span class="line">	right: 10px;</span><br><span class="line">	font-size: 100px;</span><br><span class="line">	font-weight: bold;</span><br><span class="line">	top: 130px;</span><br><span class="line">&#125;</span><br><span class="line">.pre:hover,.next:hover&#123;</span><br><span class="line">	color: red;</span><br><span class="line">&#125;</span><br><span class="line">.pre:active,.next:active&#123;</span><br><span class="line">	top: 131px;</span><br><span class="line">	color: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Js代码"><a href="#Js代码" class="headerlink" title="Js代码:"></a>Js代码:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line">window.onload = function()&#123;</span><br><span class="line">	//获取第一个</span><br><span class="line">	var box = document.querySelector(&quot;.box&quot;);</span><br><span class="line">	var pre = document.querySelector(&quot;.pre&quot;);</span><br><span class="line">	var next = document.querySelector(&quot;.next&quot;);</span><br><span class="line"></span><br><span class="line">	//点击上一个</span><br><span class="line">	function pre_pic()&#123;</span><br><span class="line">	var newLeft;						//位置对照表:</span><br><span class="line">	if(box.style.left === &quot;0px&quot;)				//&lt;img src=&quot;img/5.jpg&quot;/&gt;&lt;!-- 0--&gt;			</span><br><span class="line">	newLeft = -2400;					//&lt;img src=&quot;img/1.jpg&quot;/&gt;-&lt;!-- -600--&gt;</span><br><span class="line">	else							//&lt;img src=&quot;img/2.jpg&quot;/&gt;&lt;!-- -1200--&gt;</span><br><span class="line">	newLeft = parseInt(box.style.left) + 600;		//&lt;img src=&quot;img/3.jpg&quot;/&gt;&lt;!-- -1800--&gt;</span><br><span class="line">								//&lt;img src=&quot;img/4.jpg&quot;/&gt;&lt;!-- -2400--&gt;</span><br><span class="line">	box.style.left = newLeft +&quot;px&quot;;				//&lt;img src=&quot;img/5.jpg&quot;/&gt;&lt;!-- -3000--&gt;</span><br><span class="line">	//改变dot的index					//&lt;img src=&quot;img/1.jpg&quot;/&gt;&lt;!-- -3600--&gt;</span><br><span class="line">	index--;</span><br><span class="line">	if(index &lt; 0)</span><br><span class="line">	index = 4;</span><br><span class="line">	</span><br><span class="line">	showCurrentDot();</span><br><span class="line">&#125;</span><br><span class="line">	pre.onclick = function()&#123;//点击调用</span><br><span class="line">		pre_pic();</span><br><span class="line">	&#125;</span><br><span class="line">	//点击下一个</span><br><span class="line">	function next_pic()&#123;</span><br><span class="line">	var newLeft;</span><br><span class="line">	if(box.style.left === &quot;-3600px&quot;)</span><br><span class="line">	newLeft = -1200;</span><br><span class="line">	else</span><br><span class="line">	newLeft = parseInt(box.style.left) - 600;</span><br><span class="line">	</span><br><span class="line">	box.style.left = newLeft +&quot;px&quot;;</span><br><span class="line">	//改变dot的index</span><br><span class="line">	index++;</span><br><span class="line">	if(index &gt; 4)</span><br><span class="line">	index = 0;</span><br><span class="line">	</span><br><span class="line">	showCurrentDot();</span><br><span class="line">&#125;</span><br><span class="line">	next.onclick = function()&#123;//点击调用</span><br><span class="line">		next_pic();</span><br><span class="line">	&#125;</span><br><span class="line">	//自动播放</span><br><span class="line">	var timer =null;</span><br><span class="line">	function autoPlay() &#123;</span><br><span class="line">	timer = setInterval(function()&#123;</span><br><span class="line">		next_pic(box);</span><br><span class="line">	&#125;,1500);</span><br><span class="line">&#125;</span><br><span class="line">	autoPlay(timer);</span><br><span class="line">	//到了这一步已经基本成型~~</span><br><span class="line">	//鼠标停留</span><br><span class="line">	var container = document.querySelector(&quot;.container&quot;);</span><br><span class="line">	container.onmouseenter = function() &#123;</span><br><span class="line">	 clearInterval(timer);	</span><br><span class="line">	&#125;</span><br><span class="line">	container.onmouseleave = function() &#123;</span><br><span class="line">		autoPlay();</span><br><span class="line">	&#125;</span><br><span class="line">	//底部位置小圆点dot的index</span><br><span class="line">	var index = 0;//当前位置</span><br><span class="line">	var dots = document.getElementsByTagName(&quot;span&quot;);//所有[]</span><br><span class="line">	function showCurrentDot()&#123;</span><br><span class="line">		for(var i = 0; i &lt; dots.length; i++)&#123;//遍历清空所有</span><br><span class="line">			dots[i].className = &quot;&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		dots[index].className = &quot;on&quot;;//改变颜色</span><br><span class="line">	&#125;</span><br><span class="line">	showCurrentDot();//初始调用</span><br><span class="line">	//dot点击跳转(index对应left值)</span><br><span class="line">	for(var i = 0; i &lt; dots.length; i++)&#123;//闭包</span><br><span class="line">		(function(i)&#123;</span><br><span class="line">			dots[i].onclick = function()&#123;//点击圆点</span><br><span class="line">				var dis = index - i;//小减大=负距离(-left),大减小=正距离(+left)</span><br><span class="line">				//解决非正常的1-5span,因加入了首位两个span</span><br><span class="line">				//和使用prev和next相同，在最开始的照片5和最终的照片1在使用时会出现问题，导致符号和位数的出错，做相应地处理即可:</span><br><span class="line">				if(index == 4 &amp;&amp; parseInt(box.style.left) != -3000)//第五张&amp;&amp;!=第六个span(即0)</span><br><span class="line">				dis = dis - 5;//非中间的1-5span,向后移</span><br><span class="line">				if(index == 0 &amp;&amp; parseInt(box.style.left) != -600)//第一张&amp;&amp;!=第二个span(即-3600)</span><br><span class="line">				dis = dis + 5;//非中间的1-5span,向前移</span><br><span class="line">				</span><br><span class="line">				box.style.left = (parseInt(box.style.left) + dis * 600) + &quot;px&quot;;//当前left加计算后的</span><br><span class="line">				index = i;//改变当前红色位置</span><br><span class="line">				showCurrentDot()</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;)(i);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="最后图片自备-由于是练习所以函数都写在了一起，简单粗暴"><a href="#最后图片自备-由于是练习所以函数都写在了一起，简单粗暴" class="headerlink" title="最后图片自备~~(由于是练习所以函数都写在了一起，简单粗暴)"></a>最后图片自备~~(由于是练习所以函数都写在了一起，简单粗暴)</h4><h4 id="相信看到这里有一定基础的小伙伴应该都懂了，作为小白的我觉得难点主要还是在最后小圆点的闭包"><a href="#相信看到这里有一定基础的小伙伴应该都懂了，作为小白的我觉得难点主要还是在最后小圆点的闭包" class="headerlink" title="相信看到这里有一定基础的小伙伴应该都懂了，作为小白的我觉得难点主要还是在最后小圆点的闭包"></a>相信看到这里有一定基础的小伙伴应该都懂了，作为小白的我觉得难点主要还是在最后小圆点的闭包</h4><h3 id="附上本次案例的地址http-xiaok-fun-practice-shuffling-index-html"><a href="#附上本次案例的地址http-xiaok-fun-practice-shuffling-index-html" class="headerlink" title="附上本次案例的地址http://xiaok.fun/practice/shuffling/index.html"></a>附上本次案例的地址<a href="http://xiaok.fun/practice/shuffling/index.html" target="_blank" rel="noopener">http://xiaok.fun/practice/shuffling/index.html</a></h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/21/原生js写无缝轮播/" data-id="cjjvdjauf0006zcpu5xbzl0kc" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/20/原生js写流行的瀑布流/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">原生js写流行的瀑布流</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <h1 class="blog-title">xiaoK</h1>
+    <h2 class="blog-subtitle"></h2>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="http://pby58q6yx.bkt.clouddn.com/czwlogo.gif">
+    <h2 class="author">BrotherWei</h2>
+    <h3 class="description"></h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>7</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>0</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>21</strong><br>标签</div></a>
+    </div>
+
+
+
+    <div class="social-link">
+      
+        <a class="hvr-bounce-in" href="http://github.com/xiaokar" target="_blank" title="Github">
+          Github
+        </a>
+      
+        <a class="hvr-bounce-in" href="https://user.qzone.qq.com/804817423/main" target="_blank" title="小K空间">
+          小K空间
+        </a>
+      
+    </div>
+
+    <div class="friend-link">
+      <h2>分享链接</h2>
+      
+        <a class="hvr-bounce-in" href="http://www.xiao--k.ys168.com" target="_blank" title="个人网盘">
+          个人网盘
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy;2017 - 2018 BrotherWei<br>
+      由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
+      主题-<a href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a>
+      
+    </div>
+    
+  </div>
+</footer>
+    </div>
+    
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>   
+
+
+  <link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+  <script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+  <link rel="stylesheet" href="/plugin/galmenu/GalMenu.css">
+  <script src="/plugin/galmenu/GalMenu.js"></script>
+  <div class="GalMenu GalDropDown">
+      <div class="circle" id="gal">
+        <div class="ring">
+          
+            <a href="/" title="" class="menuItem">首页</a>
+          
+            <a href="/tags" title="" class="menuItem">标签</a>
+          
+            <a href="/categories" title="" class="menuItem">分类</a>
+          
+            <a href="/archives" title="" class="menuItem">归档</a>
+          
+            <a href="https://github.com/xiaokar" title="" class="menuItem">Github</a>
+          
+            <a href="http://www.xiao--k.ys168.com/" title="" class="menuItem">网盘</a>
+          
+        </div>
+        
+          <audio id="audio" src="#"></audio>
+        
+      </div> 
+</div>
+<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
+  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
+    for (var i = 0,
+    l = items.length; i < l; i++) {
+      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+    }</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').GalMenu({
+      'menu': 'GalDropDown'
+    })
+  });
+</script>
+
+  <section class="hidden-xs"> 
+  <ul class="cb-slideshow"> 
+    <li><span>苟利</span></li> 
+    <li><span>国家</span></li> 
+    <li><span>生死以</span></li> 
+    <li><span>岂能</span></li> 
+    <li><span>祸福</span></li> 
+    <li><span>趋避之</span></li> 
+  </ul>
+</section>
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
