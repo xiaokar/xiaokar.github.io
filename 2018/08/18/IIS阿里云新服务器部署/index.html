@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>IIS阿里云新服务器部署 | xiaoK</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="公司深圳项目中期拿阿里云新服务器练练手，在查阅了网上的知识后开始了新服务器的安装与部署，第一次弄服务器捣鼓了差不多一天，最后发现也并不难，下面是简略步骤及遇到的问题解决方法：">
+<meta name="keywords" content="IIS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IIS阿里云新服务器部署">
+<meta property="og:url" content="http://yoursite.com/2018/08/18/IIS阿里云新服务器部署/index.html">
+<meta property="og:site_name" content="xiaoK">
+<meta property="og:description" content="公司深圳项目中期拿阿里云新服务器练练手，在查阅了网上的知识后开始了新服务器的安装与部署，第一次弄服务器捣鼓了差不多一天，最后发现也并不难，下面是简略步骤及遇到的问题解决方法：">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://pby58q6yx.bkt.clouddn.com/IISserve1.png">
+<meta property="og:image" content="http://pby58q6yx.bkt.clouddn.com/IISserve2.png">
+<meta property="og:image" content="http://pby58q6yx.bkt.clouddn.com/IISserve3.png">
+<meta property="og:image" content="http://pby58q6yx.bkt.clouddn.com/IISserve4.png">
+<meta property="og:image" content="http://pby58q6yx.bkt.clouddn.com/IISserve5.png">
+<meta property="og:updated_time" content="2018-10-24T14:00:33.280Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IIS阿里云新服务器部署">
+<meta name="twitter:description" content="公司深圳项目中期拿阿里云新服务器练练手，在查阅了网上的知识后开始了新服务器的安装与部署，第一次弄服务器捣鼓了差不多一天，最后发现也并不难，下面是简略步骤及遇到的问题解决方法：">
+<meta name="twitter:image" content="http://pby58q6yx.bkt.clouddn.com/IISserve1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="xiaoK" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/plugin/bganimation/bg.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <div class="widget-wrap mobile-header">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="http://pby58q6yx.bkt.clouddn.com/czwlogo.gif">
+    <h2 class="author">BrotherWei</h2>
+    <h3 class="description"></h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>8</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>7</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>22</strong><br>标签</div></a>
+    </div>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+        <section id="main"><article id="post-IIS阿里云新服务器部署" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/18/IIS阿里云新服务器部署/" class="article-date">
+  <time class="post-time" datetime="2018-08-18T10:18:18.000Z" itemprop="datePublished">
+    <span class="post-month">8月</span><br/>
+    <span class="post-day">18</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      IIS阿里云新服务器部署
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/服务器/">服务器</a>
+  </div>
+
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="公司深圳项目中期拿阿里云新服务器练练手，在查阅了网上的知识后开始了新服务器的安装与部署，第一次弄服务器捣鼓了差不多一天，最后发现也并不难，下面是简略步骤及遇到的问题解决方法："><a href="#公司深圳项目中期拿阿里云新服务器练练手，在查阅了网上的知识后开始了新服务器的安装与部署，第一次弄服务器捣鼓了差不多一天，最后发现也并不难，下面是简略步骤及遇到的问题解决方法：" class="headerlink" title="公司深圳项目中期拿阿里云新服务器练练手，在查阅了网上的知识后开始了新服务器的安装与部署，第一次弄服务器捣鼓了差不多一天，最后发现也并不难，下面是简略步骤及遇到的问题解决方法："></a>公司深圳项目中期拿阿里云新服务器练练手，在查阅了网上的知识后开始了新服务器的安装与部署，第一次弄服务器捣鼓了差不多一天，最后发现也并不难，下面是简略步骤及遇到的问题解决方法：</h4><a id="more"></a>
+<hr>
+<h5 id="这是从阿里云买的服务器一开始的样子"><a href="#这是从阿里云买的服务器一开始的样子" class="headerlink" title="这是从阿里云买的服务器一开始的样子"></a>这是从阿里云买的服务器一开始的样子</h5><p><img src="http://pby58q6yx.bkt.clouddn.com/IISserve1.png" alt="全新刚开封"></p>
+<h5 id="先根据需要下载并安装所需的数据库及谷歌浏览器"><a href="#先根据需要下载并安装所需的数据库及谷歌浏览器" class="headerlink" title="先根据需要下载并安装所需的数据库及谷歌浏览器"></a>先根据需要下载并安装所需的数据库及谷歌浏览器</h5><h5 id="接着在等待的过程中我们可以根据网上的资料进行设置，大体是"><a href="#接着在等待的过程中我们可以根据网上的资料进行设置，大体是" class="headerlink" title="接着在等待的过程中我们可以根据网上的资料进行设置，大体是"></a>接着在等待的过程中我们可以根据网上的资料进行设置，大体是</h5><h5 id="开始菜单-gt-gt-管理工具-gt-gt-服务器管理器-gt-gt-角色-此时设置开始-，完成后如图："><a href="#开始菜单-gt-gt-管理工具-gt-gt-服务器管理器-gt-gt-角色-此时设置开始-，完成后如图：" class="headerlink" title="开始菜单&gt;&gt;管理工具&gt;&gt;服务器管理器&gt;&gt;角色(此时设置开始)，完成后如图："></a>开始菜单&gt;&gt;管理工具&gt;&gt;服务器管理器&gt;&gt;角色(此时设置开始)，完成后如图：</h5><p><img src="http://pby58q6yx.bkt.clouddn.com/IISserve2.png" alt="设置完毕"></p>
+<h5 id="接下来是网站的部署，这点会比较久，首先在IIS服务器添加网站："><a href="#接下来是网站的部署，这点会比较久，首先在IIS服务器添加网站：" class="headerlink" title="接下来是网站的部署，这点会比较久，首先在IIS服务器添加网站："></a>接下来是网站的部署，这点会比较久，首先在IIS服务器添加网站：</h5><p><img src="http://pby58q6yx.bkt.clouddn.com/IISserve3.png" alt="添加网站"></p>
+<h5 id="然后开始前端与后台文件的发布"><a href="#然后开始前端与后台文件的发布" class="headerlink" title="然后开始前端与后台文件的发布"></a>然后开始前端与后台文件的发布</h5><p><img src="http://pby58q6yx.bkt.clouddn.com/IISserve4.png" alt="文件发布"></p>
+<h5 id="搞完这些之后剩下的就是数据库了："><a href="#搞完这些之后剩下的就是数据库了：" class="headerlink" title="搞完这些之后剩下的就是数据库了："></a>搞完这些之后剩下的就是数据库了：</h5><h5 id="步骤：本地数据库文件备份-gt-gt-数据库备份文件迁移到服务器-gt-gt-服务器数据库使用备份文件进行还原"><a href="#步骤：本地数据库文件备份-gt-gt-数据库备份文件迁移到服务器-gt-gt-服务器数据库使用备份文件进行还原" class="headerlink" title="步骤：本地数据库文件备份&gt;&gt;数据库备份文件迁移到服务器&gt;&gt;服务器数据库使用备份文件进行还原"></a>步骤：本地数据库文件备份&gt;&gt;数据库备份文件迁移到服务器&gt;&gt;服务器数据库使用备份文件进行还原</h5><p><img src="http://pby58q6yx.bkt.clouddn.com/IISserve5.png" alt="完成"></p>
+<h5 id="到这里，服务器整个的设置与部署发布都已经完成了"><a href="#到这里，服务器整个的设置与部署发布都已经完成了" class="headerlink" title="到这里，服务器整个的设置与部署发布都已经完成了"></a>到这里，服务器整个的设置与部署发布都已经完成了</h5><h5 id="在过程中我遇到了"><a href="#在过程中我遇到了" class="headerlink" title="在过程中我遇到了"></a>在过程中我遇到了</h5><p><code>DOMException: Failed to execute &#39;open&#39; on &#39;XMLHttpRequest&#39;: Invalid URL</code></p>
+<h5 id="这个问题怎么解决呢："><a href="#这个问题怎么解决呢：" class="headerlink" title="这个问题怎么解决呢："></a>这个问题怎么解决呢：</h5><h5 id="首先查看请求地址是否格式正确，其次确认http-有没有加上去就可以了"><a href="#首先查看请求地址是否格式正确，其次确认http-有没有加上去就可以了" class="headerlink" title="首先查看请求地址是否格式正确，其次确认http://有没有加上去就可以了"></a>首先查看请求地址是否格式正确，其次确认http://有没有加上去就可以了</h5><p>这个是目前还在开发中的项目地址：<a href="http://121.201.65.240:8080/#/login" target="_blank" rel="noopener">XX后台管理系统</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/18/IIS阿里云新服务器部署/" data-id="cjnn6xhm70000ygv2br1dd39v" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IIS/">IIS</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/21/原生js写无缝轮播/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">原生js写无缝轮播</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <h1 class="blog-title">xiaoK</h1>
+    <h2 class="blog-subtitle"></h2>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="http://pby58q6yx.bkt.clouddn.com/czwlogo.gif">
+    <h2 class="author">BrotherWei</h2>
+    <h3 class="description"></h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>8</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>7</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>22</strong><br>标签</div></a>
+    </div>
+
+
+
+    <div class="social-link">
+      
+        <a class="hvr-bounce-in" href="http://github.com/xiaokar" target="_blank" title="Github">
+          Github
+        </a>
+      
+        <a class="hvr-bounce-in" href="https://user.qzone.qq.com/804817423/main" target="_blank" title="小K空间">
+          小K空间
+        </a>
+      
+    </div>
+
+    <div class="friend-link">
+      <h2>分享链接</h2>
+      
+        <a class="hvr-bounce-in" href="http://www.xiao--k.ys168.com" target="_blank" title="个人网盘">
+          个人网盘
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy;2017 - 2018 BrotherWei<br>
+      由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
+      主题-<a href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a>
+      
+    </div>
+    
+  </div>
+</footer>
+    </div>
+    
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>   
+
+
+  <link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+  <script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+  <link rel="stylesheet" href="/plugin/galmenu/GalMenu.css">
+  <script src="/plugin/galmenu/GalMenu.js"></script>
+  <div class="GalMenu GalDropDown">
+      <div class="circle" id="gal">
+        <div class="ring">
+          
+            <a href="/" title="" class="menuItem">首页</a>
+          
+            <a href="/tags" title="" class="menuItem">标签</a>
+          
+            <a href="/categories" title="" class="menuItem">分类</a>
+          
+            <a href="/archives" title="" class="menuItem">归档</a>
+          
+            <a href="https://github.com/xiaokar" title="" class="menuItem">Github</a>
+          
+            <a href="http://www.xiao--k.ys168.com/" title="" class="menuItem">网盘</a>
+          
+        </div>
+        
+          <audio id="audio" src="#"></audio>
+        
+      </div> 
+</div>
+<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
+  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
+    for (var i = 0,
+    l = items.length; i < l; i++) {
+      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+    }</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').GalMenu({
+      'menu': 'GalDropDown'
+    })
+  });
+</script>
+
+  <section class="hidden-xs"> 
+  <ul class="cb-slideshow"> 
+    <li><span>苟利</span></li> 
+    <li><span>国家</span></li> 
+    <li><span>生死以</span></li> 
+    <li><span>岂能</span></li> 
+    <li><span>祸福</span></li> 
+    <li><span>趋避之</span></li> 
+  </ul>
+</section>
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
