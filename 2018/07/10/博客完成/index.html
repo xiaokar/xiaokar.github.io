@@ -71,65 +71,92 @@
   </div>
 </div>
 
-        <section id="main"><article id="<%= post.layout %>-<%= post.slug %>" class="wow slideInRight article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-博客完成" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+    <a href="/2018/07/10/博客完成/" class="article-date">
+  <time class="post-time" datetime="2018-07-10T11:30:47.000Z" itemprop="datePublished">
+    <span class="post-month">7月</span><br/>
+    <span class="post-day">10</span>
+  </time>
+</a>
    
   </div>
   <div class="article-inner">
-    <%- partial('post/gallery') %>
-    <% if (post.link || post.title){ %>
+    
+    
       <header class="article-header">
-        <%- partial('post/title', {class_name: 'article-title'}) %>
+        
+  
+    <h1 class="article-title" itemprop="name">
+      博客完成
+    </h1>
+  
+
         <div>
-          <%- partial('post/category', {class_name: 'article-title'}) %>
-          <% if (post.layout === "post"){ %>
-              <%- partial('post/view') %>
-          <% } %>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+  </div>
+
+          
+              
+  &nbsp; | &nbsp;
+  <div class="view-box">
+    <span id="/2018/07/10/博客完成/" class="leancloud_visitors" data-flag-title="博客完成">
+      &nbsp;阅读次数<span class="leancloud-visitors-count"></span>
+    </span>
+  </div>
+
+
+          
         </div>
       </header>
-    <% } %>
+    
     <div class="article-entry" itemprop="articleBody">
-      <% if (post.excerpt && index){ %>
-        <%- post.excerpt %>
-        <% if (theme.excerpt_link){ %>
-          <p class="article-more-link">
-            <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
-          </p>
-        <% } %>
-      <% } else { %>
-        <%- post.content %>
-      <% } %>
+      
+        <h4 id="在空余时间自己捣鼓了一番，终于把博客给搞定了，发现网上的坑还是挺多的，下面是我在过程中遇到的一些小问题，也纠结了挺久……"><a href="#在空余时间自己捣鼓了一番，终于把博客给搞定了，发现网上的坑还是挺多的，下面是我在过程中遇到的一些小问题，也纠结了挺久……" class="headerlink" title="在空余时间自己捣鼓了一番，终于把博客给搞定了，发现网上的坑还是挺多的，下面是我在过程中遇到的一些小问题，也纠结了挺久……"></a>在空余时间自己捣鼓了一番，终于把博客给搞定了，发现网上的坑还是挺多的，下面是我在过程中遇到的一些小问题，也纠结了挺久……</h4><a id="more"></a>
+<ul>
+<li>若在git_bash编辑后hexo s提交上github报没有找到dev\tty，这时应检查自己的_config.yml文件中的repo有没有写对，格式例:<code>(冒号后空格)git@github.com:xiaokar/xiaokar.github.io.git</code></li>
+</ul>
+<hr>
+<ul>
+<li>域名解析失败/找不到IP:遇到如图片这种情况时应检查解析设置是否正确，还有必须要在云提供实名验证（纠结到小白的我了），设置完成后cmd终端ping一下自己的域名，有响应的话过几分钟就可以在浏览器进入自己的网站啦！<br><img src="https://github.com/xiaokar/blogImages/blob/master/DNSerror.jpg?raw=true" alt="这是图片- -！不是真出错了"></li>
+</ul>
+
+      
     </div>
     <footer class="article-footer">
-      <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
-      <% if (post.comments && config.disqus_shortname){ %>
-        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
-      <% } %>
-      <%- partial('post/tag') %>
+      <a data-url="http://yoursite.com/2018/07/10/博客完成/" data-id="cjp9v9inr000bwkv20r6nk4cj" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/域名解析/">域名解析</a></li></ul>
+
     </footer>
   </div>
-  <% if (!index){ %>
-    <%- partial('post/nav') %>
-  <% } %>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/07/12/使用Angular6x-Sass/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          使用Angular6.x+Sass
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
 </article>
 
-<% if (!index && post.comments && config.disqus_shortname){ %>
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
-<% } %>
 
-<% if (!index && post.comments && theme.uyan){ %>
-  <div id="comments" class="comments">
-    <div id="uyan_frame"></div>
-  </div>
-<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=<%- theme.uyan %>"></script>
-<% } %>
 
-<% if (!index && post.comments && theme.valine) { %>
+
+
+
   <style>
     .vwrap,.vinfo,.vcard {background:white}
     .v .vlist .vcard .vh .vmeta .vat {margin-right:10px}
@@ -142,15 +169,10 @@
              el: '#vcomments',
              appId: 'jh8F51xrIFplMfmLR8f95x4O-gzGzoHsz',
              appKey: 'fHgNjlGJv9QNDYbDwik6NzDY',
-             placeholder: 'ヾﾉ≧∀≦)o来啊，快来和xiaoKar快活啊! '
-             notify: false,
-             verify: false,
-             avatar: mm,
-             guest_info: nick,mail,link,
-             pageSize: 10
+             placeholder: 'Come and have fun with xiaoKar! '
          })
     </script>
-<% } %></section>
+</section>
         
           <aside id="sidebar">
   

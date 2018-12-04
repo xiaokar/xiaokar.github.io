@@ -74,65 +74,96 @@
   </div>
 </div>
 
-        <section id="main"><article id="<%= post.layout %>-<%= post.slug %>" class="wow slideInRight article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Angular双向绑定-函数方法组合" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+    <a href="/2018/07/13/Angular双向绑定-函数方法组合/" class="article-date">
+  <time class="post-time" datetime="2018-07-13T11:01:39.000Z" itemprop="datePublished">
+    <span class="post-month">7月</span><br/>
+    <span class="post-day">13</span>
+  </time>
+</a>
    
   </div>
   <div class="article-inner">
-    <%- partial('post/gallery') %>
-    <% if (post.link || post.title){ %>
+    
+    
       <header class="article-header">
-        <%- partial('post/title', {class_name: 'article-title'}) %>
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Angular双向绑定+函数方法组合
+    </h1>
+  
+
         <div>
-          <%- partial('post/category', {class_name: 'article-title'}) %>
-          <% if (post.layout === "post"){ %>
-              <%- partial('post/view') %>
-          <% } %>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Angular6-x技巧/">Angular6.x技巧</a>
+  </div>
+
+          
+              
+  &nbsp; | &nbsp;
+  <div class="view-box">
+    <span id="/2018/07/13/Angular双向绑定-函数方法组合/" class="leancloud_visitors" data-flag-title="Angular双向绑定+函数方法组合">
+      &nbsp;阅读次数<span class="leancloud-visitors-count"></span>
+    </span>
+  </div>
+
+
+          
         </div>
       </header>
-    <% } %>
+    
     <div class="article-entry" itemprop="articleBody">
-      <% if (post.excerpt && index){ %>
-        <%- post.excerpt %>
-        <% if (theme.excerpt_link){ %>
-          <p class="article-more-link">
-            <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
-          </p>
-        <% } %>
-      <% } else { %>
-        <%- post.content %>
-      <% } %>
+      
+        <h4 id="今天项目中用到了Angular和TypeScript组合的使用，感觉还是很不错的，记录下与不组合之前的差异……"><a href="#今天项目中用到了Angular和TypeScript组合的使用，感觉还是很不错的，记录下与不组合之前的差异……" class="headerlink" title="今天项目中用到了Angular和TypeScript组合的使用，感觉还是很不错的，记录下与不组合之前的差异……"></a>今天项目中用到了Angular和TypeScript组合的使用，感觉还是很不错的，记录下与不组合之前的差异……</h4><a id="more"></a>
+<hr>
+<h4 id="先来看看不组合前的"><a href="#先来看看不组合前的" class="headerlink" title="先来看看不组合前的"></a>先来看看不组合前的</h4><h5 id="利用-ngIF判断手写字符串"><a href="#利用-ngIF判断手写字符串" class="headerlink" title="利用*ngIF判断手写字符串:"></a>利用*ngIF判断手写字符串:</h5><p><img src="https://github.com/xiaokar/blogImages/blob/master/01.png?raw=true" alt=""></p>
+<h5 id="这种写法类似搬运工，只需对应数据库字段复制粘贴加修改"><a href="#这种写法类似搬运工，只需对应数据库字段复制粘贴加修改" class="headerlink" title="这种写法类似搬运工，只需对应数据库字段复制粘贴加修改"></a>这种写法类似搬运工，只需对应数据库字段复制粘贴加修改</h5><hr>
+<h4 id="再来看看组合后的"><a href="#再来看看组合后的" class="headerlink" title="再来看看组合后的:"></a>再来看看组合后的:</h4><h5 id="先在HTML界面写组合函数方法内嵌双向绑定的类"><a href="#先在HTML界面写组合函数方法内嵌双向绑定的类" class="headerlink" title="先在HTML界面写组合函数方法内嵌双向绑定的类"></a>先在HTML界面写组合函数方法内嵌双向绑定的类</h5><p><img src="https://github.com/xiaokar/blogImages/blob/master/03.png?raw=true" alt=""></p>
+<h5 id="接着在ts里面写请求服务的方法和循环判断处理"><a href="#接着在ts里面写请求服务的方法和循环判断处理" class="headerlink" title="接着在ts里面写请求服务的方法和循环判断处理"></a>接着在ts里面写请求服务的方法和循环判断处理</h5><p><img src="https://github.com/xiaokar/blogImages/blob/master/04.png?raw=true" alt=""></p>
+<h5 id="最后就是在生命钩子调用啦，大功告成！"><a href="#最后就是在生命钩子调用啦，大功告成！" class="headerlink" title="最后就是在生命钩子调用啦，大功告成！"></a>最后就是在生命钩子调用啦，大功告成！</h5><p><img src="https://github.com/xiaokar/blogImages/blob/master/02.png?raw=true" alt=""></p>
+<h4 id="原理都很简单，区别就是前者不需要请求服务，而后者则需要。如果有的选择当然选择后者啦，省心省力简单粗暴。"><a href="#原理都很简单，区别就是前者不需要请求服务，而后者则需要。如果有的选择当然选择后者啦，省心省力简单粗暴。" class="headerlink" title="原理都很简单，区别就是前者不需要请求服务，而后者则需要。如果有的选择当然选择后者啦，省心省力简单粗暴。"></a>原理都很简单，区别就是前者不需要请求服务，而后者则需要。如果有的选择当然选择后者啦，省心省力简单粗暴。</h4>
+      
     </div>
     <footer class="article-footer">
-      <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
-      <% if (post.comments && config.disqus_shortname){ %>
-        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
-      <% } %>
-      <%- partial('post/tag') %>
+      <a data-url="http://yoursite.com/2018/07/13/Angular双向绑定-函数方法组合/" data-id="cjp9v9ina0000wkv2vugbaat9" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Es6/">Es6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TypeScript/">TypeScript</a></li></ul>
+
     </footer>
   </div>
-  <% if (!index){ %>
-    <%- partial('post/nav') %>
-  <% } %>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/07/13/客户是上帝/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          客户是上帝
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/12/使用Angular6x-Sass/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">使用Angular6.x+Sass</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
-<% if (!index && post.comments && config.disqus_shortname){ %>
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
-<% } %>
 
-<% if (!index && post.comments && theme.uyan){ %>
-  <div id="comments" class="comments">
-    <div id="uyan_frame"></div>
-  </div>
-<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=<%- theme.uyan %>"></script>
-<% } %>
 
-<% if (!index && post.comments && theme.valine) { %>
+
+
+
   <style>
     .vwrap,.vinfo,.vcard {background:white}
     .v .vlist .vcard .vh .vmeta .vat {margin-right:10px}
@@ -145,15 +176,10 @@
              el: '#vcomments',
              appId: 'jh8F51xrIFplMfmLR8f95x4O-gzGzoHsz',
              appKey: 'fHgNjlGJv9QNDYbDwik6NzDY',
-             placeholder: 'ヾﾉ≧∀≦)o来啊，快来和xiaoKar快活啊! '
-             notify: false,
-             verify: false,
-             avatar: mm,
-             guest_info: nick,mail,link,
-             pageSize: 10
+             placeholder: 'Come and have fun with xiaoKar! '
          })
     </script>
-<% } %></section>
+</section>
         
           <aside id="sidebar">
   
