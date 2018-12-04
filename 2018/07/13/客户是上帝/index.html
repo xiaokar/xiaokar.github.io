@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>客户是上帝 | xiaoK</title>
+  <title>客户是上帝 | xiaoK的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="终于完成了微信二期，原本一期三个人加上设计稿只用了一个月，在设计稿确定后开发完成的后期，上帝(客户)却各种要求已经改得连一期他爸都不认识了，也花了很久很久的时间，即使如此作为开发人员也只能默默接受啦！(机灵的上帝等你开发完再给你他自己的设计稿- -！)，看看样子先:(项目已发布上线，PC端请按F12手机模式调试)">
 <meta name="keywords" content="PhotoShop,Html5,Css3,JavaScrupt,Jquery,Ajax,SqlServe,.Net,C#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="客户是上帝">
 <meta property="og:url" content="http://yoursite.com/2018/07/13/客户是上帝/index.html">
-<meta property="og:site_name" content="xiaoK">
+<meta property="og:site_name" content="xiaoK的博客">
 <meta property="og:description" content="终于完成了微信二期，原本一期三个人加上设计稿只用了一个月，在设计稿确定后开发完成的后期，上帝(客户)却各种要求已经改得连一期他爸都不认识了，也花了很久很久的时间，即使如此作为开发人员也只能默默接受啦！(机灵的上帝等你开发完再给你他自己的设计稿- -！)，看看样子先:(项目已发布上线，PC端请按F12手机模式调试)">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://github.com/xiaokar/blogImages/blob/master/05.png?raw=true">
@@ -25,7 +25,7 @@
 <meta name="twitter:description" content="终于完成了微信二期，原本一期三个人加上设计稿只用了一个月，在设计稿确定后开发完成的后期，上帝(客户)却各种要求已经改得连一期他爸都不认识了，也花了很久很久的时间，即使如此作为开发人员也只能默默接受啦！(机灵的上帝等你开发完再给你他自己的设计稿- -！)，看看样子先:(项目已发布上线，PC端请按F12手机模式调试)">
 <meta name="twitter:image" content="https://github.com/xiaokar/blogImages/blob/master/05.png?raw=true">
   
-    <link rel="alternate" href="/atom.xml" title="xiaoK" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="xiaoK的博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -47,7 +47,7 @@
   <h3 class="widget-title"></h3>
   <div class="widget">
     <img class="avatar" src="https://github.com/xiaokar/blogImages/blob/master/czwlogo.gif?raw=true">
-    <h2 class="author">BrotherWei</h2>
+    <h2 class="author">xiaoKar</h2>
     <h3 class="description"></h3>
     <div class="count-box">
       <a href="/archives"><div><strong>8</strong><br>文章</div></a>
@@ -76,94 +76,65 @@
   </div>
 </div>
 
-        <section id="main"><article id="post-客户是上帝" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="<%= post.layout %>-<%= post.slug %>" class="wow slideInRight article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/07/13/客户是上帝/" class="article-date">
-  <time class="post-time" datetime="2018-07-13T11:28:41.000Z" itemprop="datePublished">
-    <span class="post-month">7月</span><br/>
-    <span class="post-day">13</span>
-  </time>
-</a>
+    <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
    
   </div>
   <div class="article-inner">
-    
-    
+    <%- partial('post/gallery') %>
+    <% if (post.link || post.title){ %>
       <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      客户是上帝
-    </h1>
-  
-
+        <%- partial('post/title', {class_name: 'article-title'}) %>
         <div>
-          
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/移动端项目/">移动端项目</a>
-  </div>
-
-          
-              
-  &nbsp; | &nbsp;
-  <div class="view-box">
-    <span id="/2018/07/13/客户是上帝/" class="leancloud_visitors" data-flag-title="客户是上帝">
-      &nbsp;阅读次数<span class="leancloud-visitors-count"></span>
-    </span>
-  </div>
-
-
-          
+          <%- partial('post/category', {class_name: 'article-title'}) %>
+          <% if (post.layout === "post"){ %>
+              <%- partial('post/view') %>
+          <% } %>
         </div>
       </header>
-    
+    <% } %>
     <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="终于完成了微信二期，原本一期三个人加上设计稿只用了一个月，在设计稿确定后开发完成的后期，上帝-客户-却各种要求已经改得连一期他爸都不认识了，也花了很久很久的时间，即使如此作为开发人员也只能默默接受啦！-机灵的上帝等你开发完再给你他自己的设计稿-！-，看看样子先-项目已发布上线，PC端请按F12手机模式调试"><a href="#终于完成了微信二期，原本一期三个人加上设计稿只用了一个月，在设计稿确定后开发完成的后期，上帝-客户-却各种要求已经改得连一期他爸都不认识了，也花了很久很久的时间，即使如此作为开发人员也只能默默接受啦！-机灵的上帝等你开发完再给你他自己的设计稿-！-，看看样子先-项目已发布上线，PC端请按F12手机模式调试" class="headerlink" title="终于完成了微信二期，原本一期三个人加上设计稿只用了一个月，在设计稿确定后开发完成的后期，上帝(客户)却各种要求已经改得连一期他爸都不认识了，也花了很久很久的时间，即使如此作为开发人员也只能默默接受啦！(机灵的上帝等你开发完再给你他自己的设计稿- -！)，看看样子先:(项目已发布上线，PC端请按F12手机模式调试)"></a>终于完成了微信二期，原本一期三个人加上设计稿只用了一个月，在设计稿确定后开发完成的后期，上帝(客户)却各种要求已经改得连一期他爸都不认识了，也花了很久很久的时间，即使如此作为开发人员也只能默默接受啦！(机灵的上帝等你开发完再给你他自己的设计稿- -！)，看看样子先:(<a href="http://bestquzhuinn.com/test/index.html" target="_blank" rel="noopener">项目</a>已发布上线，PC端请按F12手机模式调试)</h4><a id="more"></a>
-<hr>
-<h4 id="首先是首页改变的对比"><a href="#首先是首页改变的对比" class="headerlink" title="首先是首页改变的对比:"></a>首先是首页改变的对比:</h4><p><img src="https://github.com/xiaokar/blogImages/blob/master/05.png?raw=true" alt="首页Old"><br><img src="https://github.com/xiaokar/blogImages/blob/master/08.png?raw=true" alt="首页New"></p>
-<h4 id="接着是房间详情的对比"><a href="#接着是房间详情的对比" class="headerlink" title="接着是房间详情的对比:"></a>接着是房间详情的对比:</h4><p><img src="https://github.com/xiaokar/blogImages/blob/master/10.jpg?raw=true" alt="房间详情Old"><br><img src="https://github.com/xiaokar/blogImages/blob/master/07.png?raw=true" alt="房间详情New"></p>
-<h4 id="最后是会员个人中心的对比-旧版没数据"><a href="#最后是会员个人中心的对比-旧版没数据" class="headerlink" title="最后是会员个人中心的对比(旧版没数据):"></a>最后是会员个人中心的对比(旧版没数据):</h4><p><img src="https://github.com/xiaokar/blogImages/blob/master/06.png?raw=true" alt="个人中心Old"></p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://github.com/xiaokar/blogImages/blob/master/09.png?raw=true" alt="个人中心New"></h2><h3 id="项目已经发布上线啦，微信可搜索公众号“趣住酒店圈”-电脑打开貌似有问题"><a href="#项目已经发布上线啦，微信可搜索公众号“趣住酒店圈”-电脑打开貌似有问题" class="headerlink" title="项目已经发布上线啦，微信可搜索公众号“趣住酒店圈”(电脑打开貌似有问题)"></a>项目已经发布上线啦，微信可搜索公众号“<a href="http://bestquzhuinn.com/test/index.html" target="_blank" rel="noopener">趣住酒店圈</a>”(电脑打开貌似有问题)</h3><h6 id="前后对比了下的确后者漂亮多了，毕竟花的时间在那里……"><a href="#前后对比了下的确后者漂亮多了，毕竟花的时间在那里……" class="headerlink" title="前后对比了下的确后者漂亮多了，毕竟花的时间在那里……"></a>前后对比了下的确后者漂亮多了，毕竟花的时间在那里……</h6><h6 id="整体使用H5-Css3-JQ-Ajax-C-Net-SqlServe"><a href="#整体使用H5-Css3-JQ-Ajax-C-Net-SqlServe" class="headerlink" title="整体使用H5+Css3+JQ+Ajax+C#+.Net+SqlServe"></a>整体使用H5+Css3+JQ+Ajax+C#+.Net+SqlServe</h6><h6 id="接下来要继续做PC端酒店管理系统的账目啦！加油！"><a href="#接下来要继续做PC端酒店管理系统的账目啦！加油！" class="headerlink" title="接下来要继续做PC端酒店管理系统的账目啦！加油！"></a>接下来要继续做PC端酒店管理系统的账目啦！加油！</h6>
-      
+      <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+        <% if (theme.excerpt_link){ %>
+          <p class="article-more-link">
+            <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+          </p>
+        <% } %>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/13/客户是上帝/" data-id="cjp8g34gj000gqkv2dztz1a3r" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Net/">.Net</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ajax/">Ajax</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Css3/">Css3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html5/">Html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScrupt/">JavaScrupt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jquery/">Jquery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PhotoShop/">PhotoShop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SqlServe/">SqlServe</a></li></ul>
-
+      <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
+      <% if (post.comments && config.disqus_shortname){ %>
+        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
+      <% } %>
+      <%- partial('post/tag') %>
     </footer>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2018/07/15/上年年底初学BootStrap做的某米商品商城/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          上年年底初学BootStrap做的某米商品商城
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/07/13/Angular双向绑定-函数方法组合/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">Angular双向绑定+函数方法组合</div>
-    </a>
-  
-</nav>
-
-  
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
 </article>
 
+<% if (!index && post.comments && config.disqus_shortname){ %>
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+<% } %>
 
+<% if (!index && post.comments && theme.uyan){ %>
+  <div id="comments" class="comments">
+    <div id="uyan_frame"></div>
+  </div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=<%- theme.uyan %>"></script>
+<% } %>
 
-
-
-
+<% if (!index && post.comments && theme.valine) { %>
   <style>
     .vwrap,.vinfo,.vcard {background:white}
     .v .vlist .vcard .vh .vmeta .vat {margin-right:10px}
@@ -175,17 +146,23 @@
          new Valine({
              el: '#vcomments',
              appId: 'jh8F51xrIFplMfmLR8f95x4O-gzGzoHsz',
-             appKey: 'fHgNjlGJv9QNDYbDwik6NzDY'
+             appKey: 'fHgNjlGJv9QNDYbDwik6NzDY',
+             placeholder: 'ヾﾉ≧∀≦)o来啊，快来和xiaoKar快活啊! '
+             notify: false,
+             verify: false,
+             avatar: mm,
+             guest_info: nick,mail,link,
+             pageSize: 10
          })
     </script>
-</section>
+<% } %></section>
         
           <aside id="sidebar">
   
     <div class="widget-wrap">
   <h3 class="widget-title"></h3>
   <div class="widget">
-    <h1 class="blog-title">xiaoK</h1>
+    <h1 class="blog-title">xiaoK的博客</h1>
     <h2 class="blog-subtitle"></h2>
     <ul class="blog-link">
      
@@ -214,7 +191,7 @@
   <h3 class="widget-title"></h3>
   <div class="widget">
     <img class="avatar" src="https://github.com/xiaokar/blogImages/blob/master/czwlogo.gif?raw=true">
-    <h2 class="author">BrotherWei</h2>
+    <h2 class="author">xiaoKar</h2>
     <h3 class="description"></h3>
     <div class="count-box">
       <a href="/archives"><div><strong>8</strong><br>文章</div></a>
@@ -264,7 +241,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy;2017 - 2018 BrotherWei<br>
+      &copy;2017 - 2018 xiaoKar<br>
       感谢主题-<a href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a> |
       
       <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -303,7 +280,7 @@ new WOW().init();
           
             <a href="https://github.com/xiaokar" title="" class="menuItem">Github</a>
           
-            <a href="http://www.xiao--k.ys168.com/" title="" class="menuItem">网盘</a>
+            <a href="http://www.xiao--k.ys168.com" title="" class="menuItem">网盘</a>
           
         </div>
         
